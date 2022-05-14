@@ -16,7 +16,7 @@ const customStyles = {
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: "rgba(0, 0, 0, 0.09)",
+    backgroundColor: "rgba(0, 0, 0, 0.08)",
   },
 };
 
@@ -31,55 +31,35 @@ const UserTable = ({ currentItems }) => {
     setIsOpen(false);
   }
   return (
-    <div className="m-20">
+    <div className="mb-24">
+      <div className="flex flex-row w-screen bg-white border-b fixed top-24">
+        <div className="w-1/4 border-b text-base font-medium text-gray-900 py-4 text-center">id</div>
+        <div className="w-1/4 border-b text-base font-medium text-gray-900 py-4 text-center">User Name</div>
+        <div className="w-1/4 border-b text-base font-medium text-gray-900 py-4 text-center">Total Number of Trips</div>
+        <div className="w-1/4 border-b text-base font-medium text-gray-900 py-4 text-center"></div>
+      </div>
       {currentItems && (
         <div className="flex flex-col w-full">
-          <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
-            <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+          <div className="overflow-x-auto">
+            <div className="py-2 inline-block min-w-full">
               <div className="overflow-hidden">
                 <table className="min-w-full">
-                  <thead className="bg-white border-b">
-                    <tr>
-                      <th
-                        scope="col"
-                        className="text-base font-medium text-gray-900 px-6 py-4 text-left"
-                      >
-                        id
-                      </th>
-                      <th
-                        scope="col"
-                        className="text-base font-medium text-gray-900 px-6 py-4 text-left"
-                      >
-                        User Name
-                      </th>
-                      <th
-                        scope="col"
-                        className="text-base font-medium text-gray-900 px-6 py-4 text-left"
-                      >
-                        Total Number of Trips
-                      </th>
-                      <th
-                        scope="col"
-                        className="text-base font-medium text-gray-900 px-6 py-4 text-left"
-                      ></th>
-                    </tr>
-                  </thead>
                   <tbody>
                     {currentItems?.map((data, idx) => (
                       <tr
                         key={idx}
-                        className="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100"
+                        className="bg-white w-1/4 border border-b transition duration-300 ease-in-out hover:bg-gray-100"
                       >
-                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                        <td className=" py-4 w-1/4 border whitespace-nowrap text-sm font-medium text-gray-900 text-center">
                         {data?._id}
                         </td>
-                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        <td className="text-sm w-1/4 border text-gray-900 font-light  py-4 whitespace-nowrap text-center">
                           {data?.name}
                         </td>
-                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        <td className="text-sm text-gray-900  w-1/4 border font-light  py-4 whitespace-nowrap text-center">
                           {data?.trips}
                         </td>
-                        <td className="flex items-right justify-end text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        <td className="w-1/4 border text-sm text-gray-900 font-light  py-4 whitespace-nowrap text-center">
                           <button
                             onClick={openModal}
                             type="button"

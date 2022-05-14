@@ -55,20 +55,22 @@ function Pagination({ itemsPerPage }) {
         ) : (
           <>
             <UserTable currentItems={currentItems} />
-            <ReactPaginate
-              breakLabel="..."
-              nextLabel="next >"
-              onPageChange={handlePageClick}
-              pageRangeDisplayed={2}
-              pageCount={pageCount}
-              previousLabel="< prev"
-              previousClassName={`fixed top-10 left-20 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-2 rounded text-center`}
-              nextClassName={`fixed top-10 right-20 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-2 rounded text-center`}
-              renderOnZeroPageCount={null}
-              pageLinkClassName={`m-4 px-6 py-4 border-2 rounded-xl`}
-              activeLinkClassName={`bg-slate-300 font-bold`}
-              className={`mb-20 flex flex-row items-center justify-center`}
-            />
+            <div className="fixed -bottom-20 bg-white p-8 w-screen">
+              <ReactPaginate
+                breakLabel="..."
+                nextLabel="next >"
+                onPageChange={handlePageClick}
+                pageRangeDisplayed={2}
+                pageCount={pageCount}
+                previousLabel="< prev"
+                previousClassName={`fixed top-10 left-20 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-2 rounded text-center`}
+                nextClassName={`fixed top-10 right-20 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-2 rounded text-center`}
+                renderOnZeroPageCount={null}
+                pageLinkClassName={`m-4 px-6 py-4 border-2 rounded-xl`}
+                activeLinkClassName={`bg-slate-300 font-bold`}
+                className={`mb-20 flex flex-row items-center justify-center`}
+              />
+            </div>
           </>
         )}
       </div>
