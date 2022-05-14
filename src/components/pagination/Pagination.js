@@ -41,14 +41,14 @@ function Pagination({ itemsPerPage }) {
       </div>
       <div className="mt-36">
         {loader ? (
-          <div className="flex items-center justify-center h-screen">
+          <div className="flex items-center justify-center mt-40">
             <div className={"item"}>
               <Loader
                 type="spinner-cub"
                 bgColor={"black"}
                 title={"spinner-cub"}
                 color={"#FFFFFF"}
-                size={100}
+                size={80}
               />
             </div>
           </div>
