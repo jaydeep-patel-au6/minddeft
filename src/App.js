@@ -1,8 +1,12 @@
-import logo from "./logo.svg";
 import "./App.css";
+import Pagination from "./components/pagination";
 
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <div>
+      <Pagination itemsPerPage={20} />
+    </div>
+  );
 }
 
 export default App;
