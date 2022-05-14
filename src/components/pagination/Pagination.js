@@ -36,10 +36,10 @@ function Pagination({ itemsPerPage }) {
 
   return (
     <>
-      <div className="mt-10 text-2xl font-bold text-black text-center">
+      <div className="pb-16 pt-10 fixed top-0 w-screen bg-white text-2xl font-bold text-black text-center">
         Passengers Details
       </div>
-      <div className="-mt-8">
+      <div className="mt-36">
         {loader ? (
           <div className="flex items-center justify-center h-screen">
             <div className={"item"}>
@@ -62,8 +62,8 @@ function Pagination({ itemsPerPage }) {
               pageRangeDisplayed={2}
               pageCount={pageCount}
               previousLabel="< prev"
-              previousClassName={`absolute top-10 left-20 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-2 rounded text-center`}
-              nextClassName={`absolute top-10 right-20 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-2 rounded text-center`}
+              previousClassName={`fixed top-10 left-20 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-2 rounded text-center`}
+              nextClassName={`fixed top-10 right-20 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-2 rounded text-center`}
               renderOnZeroPageCount={null}
               pageLinkClassName={`m-4 px-6 py-4 border-2 rounded-xl`}
               activeLinkClassName={`bg-slate-300 font-bold`}

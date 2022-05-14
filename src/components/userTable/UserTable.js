@@ -42,25 +42,25 @@ const UserTable = ({ currentItems }) => {
                     <tr>
                       <th
                         scope="col"
-                        className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                        className="text-base font-medium text-gray-900 px-6 py-4 text-left"
                       >
                         id
                       </th>
                       <th
                         scope="col"
-                        className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                        className="text-base font-medium text-gray-900 px-6 py-4 text-left"
                       >
                         User Name
                       </th>
                       <th
                         scope="col"
-                        className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                        className="text-base font-medium text-gray-900 px-6 py-4 text-left"
                       >
                         Total Number of Trips
                       </th>
                       <th
                         scope="col"
-                        className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                        className="text-base font-medium text-gray-900 px-6 py-4 text-left"
                       ></th>
                     </tr>
                   </thead>
@@ -79,7 +79,7 @@ const UserTable = ({ currentItems }) => {
                         <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                           {data?.trips}
                         </td>
-                        <td className="flex items-center justify-center text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        <td className="flex items-right justify-end text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                           <button
                             onClick={openModal}
                             type="button"
@@ -88,7 +88,7 @@ const UserTable = ({ currentItems }) => {
                             Check Airline
                           </button>
                           {modalIsOpen && (
-                            <div className="mymove">
+                            <div>
                               <Modal
                                 isOpen={modalIsOpen}
                                 onRequestClose={closeModal}
